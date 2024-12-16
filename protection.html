@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moksidul Islam Sabit - Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #eee;
+            background: #121212;
+            overflow-x: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        img.profile-img {
+            width: 180px;
+            border-radius: 50%;
+            border: 4px solid #0f4c75;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+        .bio, .contact-info, .science-notes, .admin-panel {
+            background: #1e1e2f;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+        }
+        .bio h2, .contact-info h2, .science-notes h2 {
+            color: #0f4c75;
+            margin: 0;
+        }
+        footer {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .social-links a {
+            color: #0f4c75;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.4em;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #fff;
+        }
+        .admin-panel {
+            display: none; /* Initially hidden */
+        }
+        .admin-toggle {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .admin-toggle button {
+            background: #0f4c75;
+            color: #fff;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+        .admin-toggle button:hover {
+            background: #0c3e5a;
+        }
+        .admin-panel input, .admin-panel textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: #fff;
+            color: #333;
+        }
+        .admin-panel button {
+            background: #0f4c75;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .admin-panel button:hover {
+            background: #0c3e5a;
+        }
+        .science-notes p {
+            text-align: left;
+        }
+        .login-panel {
+            display: none; /* Initially hidden */
+            background: #1e1e2f;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        .login-panel input {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background: #fff;
+            color: #333;
+        }
+        .login-panel button {
+            background: #0f4c75;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .login-panel button:hover {
+            background: #0c3e5a;
+        }
+    </style>
+    <script>
+        function toggleAdminPanel() {
+            var panel = document.querySelector('.admin-panel');
+            var login = document.querySelector('.login-panel');
+            var password = prompt("Enter admin password:");
+            if (password === "admin123") { // Replace with your own password
+                login.style.display = 'none';
+                panel.style.display = 'block';
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+        function showLoginPanel() {
+            document.querySelector('.login-panel').style.display = 'block';
+        }
+        function hideLoginPanel() {
+            document.querySelector('.login-panel').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Moksidul Islam Sabit</h1>
+            <p>Education Professional</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <img src="https://via.placeholder.com/180" alt="Profile Photo" class="profile-img">
+        <div class="bio">
+            <h2>Welcome!</h2>
+            <p>Hello, I'm Moksidul Islam Sabit, a dedicated professional in the field of education. I am passionate about fostering learning environments and supporting educational development. I believe in the power of education to transform lives and am committed to contributing positively to this field.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:your.email@example.com" style="color: #0f4c75;">your.email@example.com</a></p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+
+        <div class="science-notes">
+            <h2>Science Notes</h2>
+            <p>Science is the pursuit of knowledge and understanding of the natural and social world following a systematic methodology based on evidence. It helps us explore the mysteries of the universe, from the smallest particles to the largest galaxies. Understanding science is crucial for progress and innovation in many fields, including technology, medicine, and environmental conservation.</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+        </div>
+
+        <div class="admin-toggle">
+            <button onclick="showLoginPanel()">Admin Panel</button>
+        </div>
+
+        <div class="login-panel">
+            <h2>Admin Login</h2>
+            <input type="password" id="admin-password" placeholder="Enter admin password">
+            <button onclick="toggleAdminPanel()">Login</button>
+        </div>
+
+        <div class="admin-panel">
+            <h2>Admin Panel</h2>
+            <form>
+                <label for="admin-email">Admin Email:</label>
+                <input type="email" id="admin-email" name="admin-email" placeholder="Enter your email">
+                <label for="admin-message">Message:</label>
+                <textarea id="admin-message" name="admin-message" rows="4" placeholder="Enter your message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Moksidul Islam Sabit. All rights reserved.</p>
+    </footer>
+</body>
+</html>
